@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuckNMaul", "RuckNMaul\RuckNMaul.csproj", "{CF47A9FC-38C3-4C48-8E38-49F2CE70D186}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuckNMaulWeb", "RuckNMaulWeb\RuckNMaulWeb.csproj", "{1D9380CC-9D31-4374-9249-9858E3579CB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF47A9FC-38C3-4C48-8E38-49F2CE70D186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF47A9FC-38C3-4C48-8E38-49F2CE70D186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF47A9FC-38C3-4C48-8E38-49F2CE70D186}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CF47A9FC-38C3-4C48-8E38-49F2CE70D186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF47A9FC-38C3-4C48-8E38-49F2CE70D186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF47A9FC-38C3-4C48-8E38-49F2CE70D186}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1D9380CC-9D31-4374-9249-9858E3579CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D9380CC-9D31-4374-9249-9858E3579CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D9380CC-9D31-4374-9249-9858E3579CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D9380CC-9D31-4374-9249-9858E3579CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
