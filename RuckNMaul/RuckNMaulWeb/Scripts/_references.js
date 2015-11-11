@@ -7,4 +7,4 @@
 /* Use online copy of Office.js for intellisense */
 /// <reference path="https://appsforoffice.microsoft.com/lib/1/hosted/outlook-win32.debug.js" />
 /// <reference path="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" />
-// <reference path="//secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js" />
+// <reference path="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js" />

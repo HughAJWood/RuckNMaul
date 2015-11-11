@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title></title>
+    <script src="../../Scripts/jquery-1.9.1.js" type="text/javascript"></script>
+
+    <link href="../../Content/Office.css" rel="stylesheet" type="text/css" />
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
+    <!-- To enable offline debugging using a local reference to Office.js, use:                        -->
+    <!--  <script src="../../Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
+    <!--  <script src="../../Scripts/Office/1/office.js" type="text/javascript"></script>  -->
+
+    <script src="../../www/services/office365/settings.js" type="text/javascript"></script>
+    <script src="../../www/services/office365/scripts/InAppBrowserOverride.js" type="text/javascript"></script>
+    <script src="../../www/services/office365/scripts/utility.js" type="text/javascript"></script>
+    <script src="../../www/services/office365/scripts/o365auth.js" type="text/javascript"></script>
+    <script src="../../www/services/office365/scripts/o365discovery.js" type="text/javascript"></script>
+    <script src="../../www/services/office365/scripts/sharepoint.js" type="text/javascript"></script>
+    <script src="../../Scripts/Core/RuckNMaul.js" type="text/javascript"></script>
+    <link href="../App.css" rel="stylesheet" type="text/css" />
+    <script src="../App.js" type="text/javascript"></script>
+
+    <link href="Home.css" rel="stylesheet" type="text/css" />
+    <script src="Home.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="content-header">
+        <div class="padding">
+            <h1>Ruck 'N' Maul</h1>
+        </div>
+    </div>
+<div id="content-main">
+    <div id="message"></div>
+    <div id="form">
+        <table>
+            <tr>
+                <th>Title</th>
+                <td>
+                    <input type="text" name="textfield1" value="Email from stefan.bauer@n8d.at" class="task-field">
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <textarea name="textfield1" class="task-field">For this amazing occasion let's celebrate every day until Sunday the 15th!!!</textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>Due date (dd-mm-yyyy)</th>
+                <td>
+                    <input type="text" name="textfield1" value="" class="task-field">
+                </td>
+            </tr>
+            <tr>
+                <th>Cost</th>
+                <td>
+                    <input type="text" name="textfield1" value="" class="task-field">
+                </td>
+            </tr>
+            <tr>
+                <th>Value</th>
+                <td>
+                    <input type="text" name="textfield1" value="" class="task-field">
+                </td>
+            </tr>
+        </table>
+            <button id="save-task" onclick="javascript:hideForm();">Save task</button>
+            <script type="text/javascript">
+                $("#form").show();
+                function hideForm() {
+                    $("#form").hide();
+                    $("#message").text("Task has been added to your SharePoint task tracking");
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

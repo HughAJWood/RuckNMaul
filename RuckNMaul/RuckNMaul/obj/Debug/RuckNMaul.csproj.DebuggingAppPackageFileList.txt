@@ -1,0 +1,2 @@
+bin\Debug\OfficeAppManifests\RuckNMaulManifest.xml
+F:\Doctor\repo\RuckNMaul\RuckNMaul\bin\Debug\RuckNMaul.debugapp

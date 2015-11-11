@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -25,6 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <TypeScriptToolsVersion>1.6</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -103,7 +105,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="merges\windows\services\office365\scripts\InAppBrowserOverride.js" />
     <Content Include="packages.config" />
+    <Content Include="www\services\office365\redirectTarget.html" />
+    <Content Include="www\services\office365\scripts\exchange.js" />
+    <Content Include="www\services\office365\scripts\InAppBrowserOverride.js" />
+    <Content Include="www\services\office365\scripts\o365auth.js" />
+    <Content Include="www\services\office365\scripts\o365discovery.js" />
+    <Content Include="www\services\office365\scripts\o365loader.js" />
+    <Content Include="www\services\office365\scripts\sharepoint.js" />
+    <Content Include="www\services\office365\scripts\utility.js" />
+    <Content Include="www\services\office365\settings.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,16 +125,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="AppCompose\App.css" />
-    <Content Include="AppCompose\App.js" />
-    <Content Include="AppCompose\Home\Home.css" />
-    <Content Include="AppCompose\Home\Home.html" />
-    <Content Include="AppCompose\Home\Home.js" />
-    <Content Include="AppRead\App.css" />
-    <Content Include="AppRead\App.js" />
-    <Content Include="AppRead\Home\Home.css" />
-    <Content Include="AppRead\Home\Home.html" />
-    <Content Include="AppRead\Home\Home.js" />
+    <Content Include="AppTaskSaver\App.css" />
+    <Content Include="AppTaskSaver\App.js" />
+    <Content Include="AppTaskSaver\Home\Home.css" />
+    <Content Include="AppTaskSaver\Home\Home.html" />
+    <Content Include="AppTaskSaver\Home\Home.js" />
     <Content Include="Content\Office.css" />
     <Content Include="Images\Close.png" />
     <Content Include="Scripts\Core\RuckNMaul.js" />
@@ -396,11 +403,23 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\typings\exchange.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\o365auth.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\o365discovery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\settings.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\sharepoint.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\utility.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>

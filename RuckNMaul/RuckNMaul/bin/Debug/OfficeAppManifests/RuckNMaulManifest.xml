@@ -21,7 +21,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="~remoteAppUrl/AppTaskSaver/Home/Home.html"/>
+        <SourceLocation DefaultValue="https://localhost:44300/AppTaskSaver/Home/Home.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
